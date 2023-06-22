@@ -2,8 +2,8 @@ import 'package:store_app/helper/api.dart';
 
 import '../models/product_model.dart';
 
-class UpdateProduct {
-  Future<ProductModel> updateProduct({
+class AddProduct {
+  Future<ProductModel> addProduct({
     required String title,
     required String price,
     required String description,
@@ -18,6 +18,6 @@ class UpdateProduct {
       "image": image,
       "category": category,
     });
-    return ProductModel.fromJason(data);
+    return ProductModel.fromJson(data);
   }
 }
